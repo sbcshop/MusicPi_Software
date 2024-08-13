@@ -6,30 +6,48 @@
 An in-depth setup and working guide for MusicPi is available on this github. 
 
 ### Features:
-
+- Powered by Raspberry Pi Pico/Pico W microcontroller which is having Dual-core Arm Cortex-M0+ processor, running up to 133 MHz
+- 1.14" TFT display for visual interaction
+- Type C interface for power with supply indicator LED
+- Onboard microSD card compatibility is useful for data logging and extended storage purposes
+- Multipurpose GPIOs breakout for additional peripheral interfacing
+- 3 Programmable Buttons to add additional controls to project 
+- 2 channel RAW and Mono Class D Audio Amplified Output supporting 3W speaker per channel 
+- PCM5100A 2VRMS DirectPath™ Stereo DAC
 
 ### Specifications:
-
+- **Microcontroller:** Supports Raspberry Pi Pico/Pico W
+- **Supply Voltage:** 5V
+- **Operating pin voltage:** 3.3V
+- **Display:** 
+  - Display Size: 1.14”
+  - Display Type: IPS TFT 
+  - Display Resolution:  135(H) X 240(V) pixels
+  - Display colors: 65K RGB
+  - Luminance(cd/m2): 400(TYP)
+  - Display interface: SPI
+  - Display Driver: ST7789V 
+- **Amplifier:** NS4150 3W Mono Class D Audio Amplifier
+- **Audio Outputs:**
+  - Amplified Headphones (3.5mm) with PAM8908JER stereo headphone amp
+  - Unamplified Line-Level
+  - 3W Speaker Output per channel
+- **DAC:** 
+  - DAC Resolution: 32-bit
+  - DAC Sampling Rate: Up to 384kHz
+  - Operating Temperature Range: -20°C ~ +70°C 
 
 
 ## Getting Started with MusicPi
 ### Hardware Overview
 #### Pinout
 
-<img src="">
+<img src="https://github.com/sbcshop/MusicPi_Software/blob/main/images/MusicPi_Pinouts.png">
 
-- (1) 5-Way Joystick
-- (2) 1.14” TFT Display
-- (3) Fingerprint sensor
-- (4) Fingerprint UART breakout
-- (5) Scan Status LED
-- (6) Header pin for Pico 
-- (7) & (8) Pico GPIOs breakout 
 
 ### Interfacing Details
 
-<img src="" width="478" height="320">
-When Raspberry Pico W connected with MusicPi following pins consumed,  
+When Raspberry Pico/Pico W connected with MusicPi following pins consumed,  
 
 <!--
 - Fingerprint Module interfacing info
@@ -116,18 +134,31 @@ With Pico or Pico W connected to IdentiPi, you can proceed to follow below steps
    Using this sample code as a guide, you can modify, build, and share codes!!
    
    We have provided [_**IdentiPi.py**_](https://github.com/sbcshop/IdentiPi_Software/blob/main/examples/IdentiPi.py) library file with most of commands related to fingerprint operations. You can refer [**Fingerprint Command Manual**](https://github.com/sbcshop/IdentiPi_Software/blob/main/documents/Fingerprint_Sensor_Command_Manual.docx.pdf) to understand more commands and particular response from module to modify or update library file as per your applications.
-     
+
+-->
    
 ## Resources
-  * [Schematic](https://github.com/sbcshop/IdentiPi_Hardware/blob/main/Design%20Data/Sch%20IdentiPi.pdf)
-  * [Hardware Files](https://github.com/sbcshop/IdentiPi_Hardware)
-  * [Step File](https://github.com/sbcshop/IdentiPi_Hardware/blob/main/Mechanical%20Data/IdentiPi.step)
+  * [Schematic](https://github.com/sbcshop/MusicPi_Hardware/blob/main/Design%20Data/Sch%20MusicPi.pdf)
+  * [Hardware Files](https://github.com/sbcshop/MusicPi_Hardware)
+  * [Step File](https://github.com/sbcshop/MusicPi_Hardware/blob/main/Mechanical%20Data/MusicPi.step)
   * [MicroPython getting started for RPi Pico/Pico W](https://docs.micropython.org/en/latest/rp2/quickref.html)
   * [Pico W Getting Started](https://projects.raspberrypi.org/en/projects/get-started-pico-w)
   * [RP2040 Datasheet](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf)
 
 ## Related Products
--->
+
+  * [Audio Codec HAT](https://shop.sb-components.co.uk/products/audio-codec-hat-for-raspberry-pi?_pos=2&_sid=dca87c6f7&_ss=r) 
+  
+    ![Audio Codec HAT](https://shop.sb-components.co.uk/cdn/shop/products/AudioCodecHATForRaspberryPi.png?v=1649074353&width=300)
+  
+  * [TRRS 3.5mm Audio Jack Breakout](https://shop.sb-components.co.uk/products/trrs-3-5mm-audio-jack-breakout?_pos=3&_sid=dca87c6f7&_ss=r)
+  
+    ![TRRS 3.5mm Audio Jack Breakout](https://shop.sb-components.co.uk/cdn/shop/files/1_93fe94b5-e09f-4f4f-9b16-65348c47343d.jpg?v=1690882465&width=300)
+  
+  * [BoomBit - Music Player for microbit](https://shop.sb-components.co.uk/products/boombit?_pos=10&_sid=39ade3b9b&_ss=r) 
+  
+    ![BoomBit - Music Player for microbit](https://shop.sb-components.co.uk/cdn/shop/products/BoomBitProductImage.png?v=1622521944&width=300)
+
  
 ## Product License
 
