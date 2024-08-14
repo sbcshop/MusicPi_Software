@@ -13,7 +13,7 @@ An in-depth setup and working guide for MusicPi is available on this github.
 - Multipurpose GPIOs breakout for additional peripheral interfacing
 - 3 Programmable Buttons to add additional controls to project 
 - 2 channel RAW and Mono Class D Audio Amplified Output supporting 3W speaker per channel 
-- PCM5100A 2VRMS DirectPath™ Stereo DAC
+- [PCM5100A](https://github.com/sbcshop/MusicPi_Software/blob/main/Documents/pcm5100a_datasheet.pdf) 2VRMS DirectPath™ Stereo DAC
 
 ### Specifications:
 - **Microcontroller:** Supports Raspberry Pi Pico/Pico W
@@ -26,13 +26,13 @@ An in-depth setup and working guide for MusicPi is available on this github.
   - Display colors: 65K RGB
   - Luminance(cd/m2): 400(TYP)
   - Display interface: SPI
-  - Display Driver: ST7789V 
-- **Amplifier:** NS4150 3W Mono Class D Audio Amplifier
+  - Display Driver: [ST7789V](https://github.com/sbcshop/MusicPi_Software/blob/main/Documents/TFT_ST7789V_Datasheet.pdf) 
+- **Amplifier:** [NS4150](https://github.com/sbcshop/MusicPi_Software/blob/main/Documents/NS4150EN_datasheet.pdf) 3W Mono Class D Audio Amplifier
 - **Audio Outputs:**
-  - Amplified Headphones (3.5mm) with PAM8908JER stereo headphone amp
+  - Amplified Headphones (3.5mm) with [PAM8908JER](https://github.com/sbcshop/MusicPi_Software/blob/main/Documents/PAM8904_datasheet.pdf) stereo headphone amp
   - Unamplified Line-Level
   - 3W Speaker Output per channel
-- **DAC:** 
+- **PCM5100A DAC:** 
   - DAC Resolution: 32-bit
   - DAC Sampling Rate: Up to 384kHz
   - Operating Temperature Range: -20°C ~ +70°C 
@@ -49,34 +49,46 @@ An in-depth setup and working guide for MusicPi is available on this github.
 
 When Raspberry Pico/Pico W connected with MusicPi following pins consumed,  
 
-<!--
-- Fingerprint Module interfacing info
-  | Pico | Fingerprint Sensor | Function |
+- | Pico | DAC PCM5100 | Function |
   |---|---|---|
-  |GP0 (UART0 TX) | F_RX | UART communicatoin pin |
-  |GP1 (UART0 RX) | F_TX | UART communicatoin pin |
-  |GP3 | P_EN | Fingerprint Enable pin => 0 to Enable and 1 to Disable | 
+  |GP11 | LRCK | I2S   |
+  |GP9  | DIN  | |
+  |GP10 | BCK  |  |
+  |GP22 | XSMT  |  |
+
+  | Pico | PAM8908 | Function |
+  |---|---|---|
+  |GP11 | RX | Serial UART connection |
+  |GP9  | TX  | Serial UART connection |
+  |GP9  | TX  | Serial UART connection |
 
 - Display interfacing details
   | Pico | Hardware Pin | Function |
   |---|---|---|
-  |GP10 | SCLK | Clock pin of SPI interface for display |
-  |GP11 | DIN  | MOSI (Master OUT Slave IN) data pin of SPI interface|
-  |GP8 | D/C | Data/command line of SPI interface for display |
+  |GP14 | SCLK  | Clock pin of SPI interface for display |
+  |GP15 | DIN   | MOSI (Master OUT Slave IN) data pin of SPI interface|
+  |GP6  | D/C   | Data/command line of SPI interface for display |
   |GP12 | RESET | Display reset pin |
-  |GP9 | CS   | Chip Select pin of SPI interface for display| 
-  |GP13 | BL | Backlight pin for display |
+  |GP13 | CS    | Chip Select pin of SPI interface for display| 
+  |GP7  | BL    | Backlight pin for display |
 
-- Joystick interfacing details
-  | Pico W | Joystick | Function |
+- SD Card interfacing : SPI0 of Pico is used for interfacing SDcard 
+  | Pico | SDCard | Function |
   |---|---|---|
-  |GP14 | JY_U |Programmable Joystick button|
-  |GP15 | JY_R |Programmable Joystick button|
-  |GP16 | JY_L |Programmable Joystick button|
-  |GP17 | JY_D |Programmable Joystick button|
-  |GP18 | JY_Sel |Programmable Joystick button|
+  |GP18 | SCK | SPI clock pin|
+  |GP19 | MOSI | SPI Master OUT Slave IN interface pin|
+  |GP16 | MISO | SPI Master IN Slave OUT interface pin |
+  |GP17 | CS | Chip Select pin|
+  
+- Buttons and RGB interfacing details
+  | Pico | Hardware | Function |
+  |---|---|---|
+  |GP2 | BT1 |Programmable button|
+  |GP3 | BT2 |Programmable button|
+  |GP4 | BT3 |Programmable button|
+  |GP26 | DIN | Data in pin of WS2812 RGB Led|
 
-With Pico or Pico W connected to IdentiPi, you can proceed to follow below steps to get start working with IdentiPi. 
+With Pico or Pico W connected to MusicPi, you can proceed to follow below steps to get start working with MusicPi. 
 
 ### 1. How to Install Boot Firmware in Pico W of IdentiPi 
 
@@ -123,19 +135,16 @@ With Pico or Pico W connected to IdentiPi, you can proceed to follow below steps
    - Move multiple files at one go, below image demonstrate that
      
       <img src="https://github.com/sbcshop/3.2_Touchsy_Pico_W_Capacitive_Software/blob/main/images/multiple_file_transfer.gif" />
+-->
 
 ### Example Codes
-   Try reference demo codes to test onboard components of IdentiPi. Save whatever example code file you want to try as **main.py** in **Pico/Pico W** or Run directly from Thonny IDE by clicking green play button
-   - [Display Demo](https://github.com/sbcshop/IdentiPi_Software/blob/main/examples/Demo_LCD.py) : code to test display
-   - [Joystick Demo](https://github.com/sbcshop/IdentiPi_Software/blob/main/examples/Demo_Joystick.py) : code to work with onboard joystick
-   - [Fingerprint Demo](https://github.com/sbcshop/IdentiPi_Software/blob/main/examples/Demo_Add_Fingerprint.py) : Register fingerprint using onboard fingerprint sensor
-   - and [More..](https://github.com/sbcshop/IdentiPi_Software/tree/main/examples)
+   Try reference demo codes to test onboard components of MusicPi, make sure to move [Lib files]() into Pico before trying example codes. 
+   - [Display Demo](https://github.com/sbcshop/MusicPi_Software/tree/main/examples/Demo_LCD.py) : code to test display
+   - [RGB LED Demo](https://github.com/sbcshop/MusicPi_Software/tree/main/examples/Demo_Joystick.py) : code to blink or experiment with onboard RGB LEDs.
+   - [Demo Audio I2S](https://github.com/sbcshop/MusicPi_Software/tree/main/examples/Demo_Add_Fingerprint.py) : to play music using Pico/Pico W
+   - and [More..](https://github.com/sbcshop/MusicPi_Software/tree/main/examples)
    
    Using this sample code as a guide, you can modify, build, and share codes!!
-   
-   We have provided [_**IdentiPi.py**_](https://github.com/sbcshop/IdentiPi_Software/blob/main/examples/IdentiPi.py) library file with most of commands related to fingerprint operations. You can refer [**Fingerprint Command Manual**](https://github.com/sbcshop/IdentiPi_Software/blob/main/documents/Fingerprint_Sensor_Command_Manual.docx.pdf) to understand more commands and particular response from module to modify or update library file as per your applications.
-
--->
    
 ## Resources
   * [Schematic](https://github.com/sbcshop/MusicPi_Hardware/blob/main/Design%20Data/Sch%20MusicPi.pdf)
