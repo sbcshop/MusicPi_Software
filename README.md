@@ -54,10 +54,10 @@ When Raspberry Pico/Pico W connected with MusicPi following pins consumed,
 - I2S Audio Hardware Interfacing 
   | Pico | DAC PCM5100 | Function |
   |---|---|---|
-  |GP11 | LRCK | I2S   |
-  |GP9  | DIN  | |
-  |GP10 | BCK  |  |
-  |GP22 | XSMT  |  |
+  |GP11 | LRCK | I2S LR Clock (WS Clock) |
+  |GP9  | DIN  | I2S Data Into the amplifier (out from Pico) |
+  |GP10 | BCK  | I2S Clock  |
+  |GP22 | XSMT | Soft Mute Control, Soft mute (Low) / soft un-mute (High) |
 
   Headphone Amplifier
   | Pico | PAM8908 | Function |
