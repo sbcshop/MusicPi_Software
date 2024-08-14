@@ -48,20 +48,22 @@ An in-depth setup and working guide for MusicPi is available on this github.
 ### Interfacing Details
 
 When Raspberry Pico/Pico W connected with MusicPi following pins consumed,  
+<img src="" width="" height="">
 
-- | Pico | DAC PCM5100 | Function |
+- I2S Audio Hardware Interfacing 
+  | Pico | DAC PCM5100 | Function |
   |---|---|---|
   |GP11 | LRCK | I2S   |
   |GP9  | DIN  | |
   |GP10 | BCK  |  |
   |GP22 | XSMT  |  |
 
+  Headphone Amplifier
   | Pico | PAM8908 | Function |
   |---|---|---|
-  |GP11 | RX | Serial UART connection |
-  |GP9  | TX  | Serial UART connection |
-  |GP9  | TX  | Serial UART connection |
-
+  |GP20  | GAIN 0  | GAIN select pin 0 |
+  |GP21  | GAIN 1  |  GAIN select pin 1 |
+  
 - Display interfacing details
   | Pico | Hardware Pin | Function |
   |---|---|---|
@@ -90,58 +92,48 @@ When Raspberry Pico/Pico W connected with MusicPi following pins consumed,
 
 With Pico or Pico W connected to MusicPi, you can proceed to follow below steps to get start working with MusicPi. 
 
-### 1. How to Install Boot Firmware in Pico W of IdentiPi 
+## Step 1: Setup MusicPi and Development Environment 
+1. Download and Install Thonny IDE for your respective OS from Link [Download Thonny](https://thonny.org/). This will be used for writing code script.
+   
+   <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img.JPG" />
+   
+2. Adding **CircuitPython** bootloader in Pico/Pico W of  
 
-- If you already have MicroPython firmware with the inbuilt ST7789 module, then you can skip this step and jump to **step 2** for trying demo codes.
-- In case, you need to add **MicroPython firmware** in Pico of IdentiPi. First, you need to *Press and Hold* the boot button on pico W of IdentiPi, and then, without releasing the button, connect it to PC/laptop using micro USB cable. Check below image for reference,
-  
+- For this first you need to *Press and Hold* the boot button of Pico, without releasing the button connect it to USB port of PC/laptop.
+
   <img src="https://github.com/sbcshop/ArdiPi_Software/blob/main/images/pico_bootmode.gif" width="340" height="228">
 
-- Now your device is in boot mode, and you will see a new mass storage device named "RPI-RP2" as shown in the below figure.
-  <img src= "https://github.com/sbcshop/PiCoder-Software/blob/main/images/RPI_folder.jpg" width="720" height="360"/>
-
-- Download the MicroPython firmware file provided in this repo above as ["**_IdentiPi_firmware.uf2_**"](https://github.com/sbcshop/IdentiPi_Software/blob/main/IdentiPi_firmware.uf2). Drag and drop this **_IdentiPi_firmware.uf2_** file onto the RPI-RP2 volume. Your Pico W will reboot. You are now running MicroPython on IdentiPi's pico.
-  <img src= "https://github.com/sbcshop/IdentiPi_Software/blob/main/images/fimware_upload.jpg" width="626" height="476">
-  
-### 2. Running First Program in IdentiPi
-   - Download **Thonny IDE** from [Download link](https://thonny.org/) as per your OS and install it.
-   - Download this github which contains various examples and open anyone of example in Thonny.
-
-     <img src= "https://github.com/sbcshop/IdentiPi_Software/blob/main/images/identiPi_git_download.jpg" />
-
-   - Now we have **Thonny IDE application** and github example codes, Connect IdentiPi with Pico to laptop/PC. Open any example code in Thonny IDE. Then select micropython device at the bottom right with a suitable COM port, as shown in the below figure. You might get a different COM port.
-
-     <img src="https://github.com/sbcshop/IdentiPi_Software/blob/main/images/board_select.jpg">
-  
-   - Make sure to save _**IdentiPi.py**_ library file to device to avoid any execution error.
-
-      <img src= "https://github.com/sbcshop/IdentiPi_Software/blob/main/images/IdentiPi_library.jpg" />
-
-   - Once everything all set, with any demo code open click on green play button to test program on IdentiPi.
-
-     <img src= "https://github.com/sbcshop/IdentiPi_Software/blob/main/images/run_program.jpg" />
-
-   - For standalone execution without thonny you need to transfer your script into Pico of IdentiPi as main.py, so when again power up board it will start executing saved script. 
-
-     <img src= "https://github.com/sbcshop/IdentiPi_Software/blob/main/images/standalone_execution.jpg" />
-
-     Try out below provided reference example demo codes and modify to build your own application codes.
-
-### How to move any script codes on Pico/Pico W
-   - Single File transfer, click on **File -> Save Copy -> select Raspberry Pi Pico** , Then save file as **main.py**
+- Now your device is in boot mode, and you will see a new mass storage device named "RPI-RP2" as shown in the below figure. Either copy or drag & drop ["MusicPi_firmware.uf2"](https://github.com/sbcshop/MusicPi_Software/blob/main/MusicPi_firmware.uf2) firmware file available in this repository to the device as shown in figure.
      
-      <img src="https://github.com/sbcshop/3.2_Touchsy_Pico_W_Resistive_Software/blob/main/images/transfer_script_pico.gif" />
+  <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img13.png" /> 
+     
+- If bootloader installed properly inside Pico of MusicPi. So device will reboot or you can reconnect without pressing boot button to see a device with some initial file as shown in the below image:-
+  
+  <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img11.png" />
+
+<!--
+## Step 2: Running First Code in MusicPi
+1. Start Thonny IDE application, after this go to run->select interpreter, choose device and suitable com port
+    <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img18.png" />
+    <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img19.png" />
+
+    Write simple python code and click on green run button or you can open any demo example files provided here in github. 
+
+2. Now you are ready to try out your own codes. Even you can try some of below Example codes provided, for that just copy all the files (library files) from [```lib```](https://github.com/sbcshop/HackyPi-Software/tree/main/lib) folder of this repository and paste inside the HackyPi ```lib``` folder
+
+### Run Script Standalone without Thonny IDE
+   Follow below steps to save your script to device, once done then remove device and reinsert in PC to run your script without the need of Thonny IDE. Meaning you can now plug to USB Port and your code will be executed by HackyPi.
    
-   - Move multiple files at one go, below image demonstrate that
-     
-      <img src="https://github.com/sbcshop/3.2_Touchsy_Pico_W_Capacitive_Software/blob/main/images/multiple_file_transfer.gif" />
+   **And remember to save your script as _code.py_ name into device otherwise script will not run after inserting into USB.**
+   
+<img src= "https://github.com/sbcshop/HackyPi-Software/blob/main/images/Run-Script-standalone.gif" />
 -->
 
 ### Example Codes
    Try reference demo codes to test onboard components of MusicPi, make sure to move [Lib files]() into Pico before trying example codes. 
-   - [Display Demo](https://github.com/sbcshop/MusicPi_Software/tree/main/examples/Demo_LCD.py) : code to test display
-   - [RGB LED Demo](https://github.com/sbcshop/MusicPi_Software/tree/main/examples/Demo_Joystick.py) : code to blink or experiment with onboard RGB LEDs.
-   - [Demo Audio I2S](https://github.com/sbcshop/MusicPi_Software/tree/main/examples/Demo_Add_Fingerprint.py) : to play music using Pico/Pico W
+   - [Display Demo]() : code to test display
+   - [RGB LED Demo]() : code to blink or experiment with onboard RGB LEDs.
+   - [Demo Audio I2S]() : to play music using Pico/Pico W
    - and [More..](https://github.com/sbcshop/MusicPi_Software/tree/main/examples)
    
    Using this sample code as a guide, you can modify, build, and share codes!!
