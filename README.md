@@ -47,8 +47,9 @@ An in-depth setup and working guide for MusicPi is available on this github.
 
 ### Interfacing Details
 
+<img src="https://github.com/sbcshop/MusicPi_Software/blob/main/images/musicpi_setup.png" width="583" height="357">
+
 When Raspberry Pico/Pico W connected with MusicPi following pins consumed,  
-<img src="" width="" height="">
 
 - I2S Audio Hardware Interfacing 
   | Pico | DAC PCM5100 | Function |
