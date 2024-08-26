@@ -112,16 +112,15 @@ With Pico or Pico W connected to MusicPi, you can proceed to follow below steps 
   
   <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img11.png" />
 
-<!--
+
 ## Step 2: Running First Code in MusicPi
 1. Start Thonny IDE application, after this go to run->select interpreter, choose device and suitable com port
     <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img18.png" />
     <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img19.png" />
 
-    Write simple python code and click on green run button or you can open any demo example files provided here in github. 
+2. Now you are ready to try out your own codes. Even you can try some of below Example codes provided, for that just copy all the files (library files) from [```lib```](https://github.com/sbcshop/HackyPi-Software/tree/main/lib) folder of this repository and paste inside the Pico of MusicPi ```lib``` folder
 
-2. Now you are ready to try out your own codes. Even you can try some of below Example codes provided, for that just copy all the files (library files) from [```lib```](https://github.com/sbcshop/HackyPi-Software/tree/main/lib) folder of this repository and paste inside the HackyPi ```lib``` folder
-
+<!--
 ### Run Script Standalone without Thonny IDE
    Follow below steps to save your script to device, once done then remove device and reinsert in PC to run your script without the need of Thonny IDE. Meaning you can now plug to USB Port and your code will be executed by HackyPi.
    
