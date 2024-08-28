@@ -69,6 +69,15 @@ When Raspberry Pico/Pico W connected with MusicPi following pins consumed,
   |---|---|---|
   |GP20  | GAIN 0  | GAIN select pin 0 |
   |GP21  | GAIN 1  |  GAIN select pin 1 |
+
+
+  #### AlWAYS REMOVE POWER when you want to play with GAIN SETTING, Make sure to follow Gain Setting as shown in below image,
+
+    <img src="https://github.com/sbcshop/MusicPi_Software/blob/main/images/gain_setting.png" width="381" height="213">
+  
+  Let suppose I want to set GAIN SEL0, If _switch 1_ is on **_G [GND]_** side then _switch 2_ must be on _**V [VCC]**_ side and vice-verse.
+
+  #### CAUTION: **_Always maintain alternate position, never push both switch of each gain on VCC and GND at the same time otherwise short circuit will happen and you may damage device._**
   
 - Display interfacing details
   | Pico | Hardware Pin | Function |
