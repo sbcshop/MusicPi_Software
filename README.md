@@ -1,7 +1,7 @@
 # MusicPi_Software
-<!--
-<img src="https://github.com/sbcshop/IdentiPi_Software/blob/main/images/IdentiPi_banner.jpg">
--->
+<img src="https://github.com/sbcshop/MusicPi_Software/blob/main/images/musicPi_banner.png">
+
+The Raspberry Pi Pico is a fantastic microcontroller with boundless possibilities, but like any technology, it has its limitations. The MusicPi pico audio expansion board is designed to complement your Raspberry Pi Pico and unlock its full potential, especially when it comes to audio applications.
 
 An in-depth setup and working guide for MusicPi is available on this github. 
 
@@ -48,6 +48,11 @@ An in-depth setup and working guide for MusicPi is available on this github.
 ### Interfacing Details
 
 <img src="https://github.com/sbcshop/MusicPi_Software/blob/main/images/musicpi_setup.png" width="583" height="357">
+
+Compatible speakers available Here:
+* [2W 6 Ohm Mono Enclosed Speaker](https://shop.sb-components.co.uk/products/2-watt-6-ohm-mini-portable-speaker-for-small-electronic-projects-2pcs)
+* [3 Watt 8 Ohm Mini Speaker](https://shop.sb-components.co.uk/products/3-watt-8-ohm-mini-speaker-full-range-portable-for-small-electronic-projects)
+* [5W 8 Ohm Dual Mini Speaker](https://shop.sb-components.co.uk/products/8-ohm-5w-speaker-ic-test-board)
 
 When Raspberry Pico/Pico W connected with MusicPi following pins consumed,  
 
@@ -114,27 +119,23 @@ With Pico or Pico W connected to MusicPi, you can proceed to follow below steps 
 
 
 ## Step 2: Running First Code in MusicPi
-1. Start Thonny IDE application, after this go to run->select interpreter, choose device and suitable com port
-    <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img18.png" />
-    <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img19.png" />
+1. Start Thonny IDE application, at bottom right corner, choose device with suitable com port
 
-2. Now you are ready to try out your own codes. Even you can try some of below Example codes provided, for that just copy all the files (library files) from [```lib```](https://github.com/sbcshop/HackyPi-Software/tree/main/lib) folder of this repository and paste inside the Pico of MusicPi ```lib``` folder
+   <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/Select_device.png" />
 
-<!--
-### Run Script Standalone without Thonny IDE
-   Follow below steps to save your script to device, once done then remove device and reinsert in PC to run your script without the need of Thonny IDE. Meaning you can now plug to USB Port and your code will be executed by HackyPi.
+2. Download complete MusicPi github which contains lib folder and examples. Upload [**lib**]() folder to Pico of MusicPi
+
+   <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/lib_upload.png" />
+
+3. Now you can try running any example script code from github [here]() or write your own codes to experiment. With script open in Thonny IDE and device connected, just click of green play button OR You can save file as _**code.py**_ into Pico for standalone execution without thonny.
    
-   **And remember to save your script as _code.py_ name into device otherwise script will not run after inserting into USB.**
-   
-<img src= "https://github.com/sbcshop/HackyPi-Software/blob/main/images/Run-Script-standalone.gif" />
--->
+   <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/script_run.png" />
 
-### Example Codes
-   Try reference demo codes to test onboard components of MusicPi, make sure to move [Lib files]() into Pico before trying example codes. 
+#### Some Example Codes
+   Try reference demo codes to test onboard components of MusicPi, make sure to move [**Lib files**]() into Pico before trying example codes. 
    - [Display Demo]() : code to test display
    - [RGB LED Demo]() : code to blink or experiment with onboard RGB LEDs.
    - [Demo Audio I2S]() : to play music using Pico/Pico W
-   - and [More..](https://github.com/sbcshop/MusicPi_Software/tree/main/examples)
    
    Using this sample code as a guide, you can modify, build, and share codes!!
    
