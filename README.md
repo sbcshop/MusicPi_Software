@@ -132,19 +132,19 @@ With Pico or Pico W connected to MusicPi, you can proceed to follow below steps 
 
    <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/Select_device.png" />
 
-2. Download complete MusicPi github which contains lib folder and examples. Upload [**lib**]() folder to Pico of MusicPi
+2. Download complete MusicPi github which contains lib folder and examples. Upload [**lib**](https://github.com/sbcshop/MusicPi_Software/tree/main/Examples/lib) folder to Pico of MusicPi
 
    <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/lib_upload.png" />
 
-3. Now you can try running any example script code from github [here]() or write your own codes to experiment. With script open in Thonny IDE and device connected, just click of green play button OR You can save file as _**code.py**_ into Pico for standalone execution without thonny.
+3. Now you can try running any example script code from github [here](https://github.com/sbcshop/MusicPi_Software/tree/main/Examples) or write your own codes to experiment. With script open in Thonny IDE and device connected, just click of green play button OR You can save file as _**code.py**_ into Pico for standalone execution without thonny.
    
    <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/script_run.png" />
 
 #### Some Example Codes
-   Try reference demo codes to test onboard components of MusicPi, make sure to move [**Lib files**]() into Pico before trying example codes. 
-   - [Display Demo]() : code to test display
-   - [RGB LED Demo]() : code to blink or experiment with onboard RGB LEDs.
-   - [Demo Audio I2S]() : to play music using Pico/Pico W
+   Try reference demo codes to test onboard components of MusicPi, make sure to move [**Lib files**](https://github.com/sbcshop/MusicPi_Software/tree/main/Examples/lib) into Pico before trying example codes. 
+   - [Display Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Display.py) : code to test display
+   - [RGB LED Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_RGBLED.py) : code to blink or experiment with onboard RGB LEDs.
+   - [Demo Audio I2S](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Audio_I2S.py) : to play music using Pico/Pico W
    
    Using this sample code as a guide, you can modify, build, and share codes!!
    
