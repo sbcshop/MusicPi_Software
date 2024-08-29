@@ -75,9 +75,9 @@ When Raspberry Pico/Pico W connected with MusicPi following pins consumed,
 
     <img src="https://github.com/sbcshop/MusicPi_Software/blob/main/images/gain_setting.png" width="381" height="213">
   
-  Let suppose I want to set GAIN SEL0, If _switch 1_ is on **_G [GND]_** side then _switch 2_ must be on _**V [VCC]**_ side and vice-verse.
+  Let suppose I want to set GAIN SEL0, If _switch 1_ is on **_G [GND]_** side then _switch 2_ must be on opposite side of _**V [VCC]**_ and vice-verse.
 
-  #### CAUTION: **_Always maintain alternate position, never push both switch of each gain on VCC and GND at the same time otherwise short circuit will happen and you may damage device._**
+  #### CAUTION: **_Always maintain alternate position, never push both switch of particular gain on VCC and GND side at the same time otherwise short circuit will happen and you may damage device._**
   
 - Display interfacing details
   | Pico | Hardware Pin | Function |
