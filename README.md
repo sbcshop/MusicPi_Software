@@ -145,7 +145,7 @@ With Pico or Pico W connected to MusicPi, you can proceed to follow below steps 
    - [Display Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Display.py) : code to test display
    - [RGB LED Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_RGBLED.py) : code to blink or experiment with onboard RGB LEDs.
    - [Demo Audio I2S](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Audio_I2S.py) : to play music using Pico/Pico W
-   - [Play Songs](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_PlaySongs.py): store and play songs from SDcard with MusicPi, follow steps to create songs [below](https://github.com/sbcshop/MusicPi_Software/main/README.md#build-songs-for-musicpi)
+   - [Play Songs](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_PlaySongs.py): store and play songs from SDcard with MusicPi, follow steps to create songs [below](https://github.com/sbcshop/MusicPi_Software/blob/main/README.md#build-songs-for-musicpi)
    
    Using this sample code as a guide, you can modify, build, and share codes!!
 
