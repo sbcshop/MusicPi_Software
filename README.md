@@ -145,8 +145,25 @@ With Pico or Pico W connected to MusicPi, you can proceed to follow below steps 
    - [Display Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Display.py) : code to test display
    - [RGB LED Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_RGBLED.py) : code to blink or experiment with onboard RGB LEDs.
    - [Demo Audio I2S](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Audio_I2S.py) : to play music using Pico/Pico W
+   - [Play Songs](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_PlaySongs.py): store and play songs from SDcard with MusicPi, follow steps to create songs [below](https://github.com/sbcshop/MusicPi_Software/main/README.md#build-songs-for-musicpi)
    
    Using this sample code as a guide, you can modify, build, and share codes!!
+
+### Build Songs for MusicPi
+- Download and install Audacity software from [official site](https://www.audacityteam.org/)
+- Download your favourite songs and open into Audacity software. Then select File > Export Audio
+
+  <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a1.png" />
+
+- Now select MP3 or WAV option, for now we will go with MP3.
+- Sample Rate and Quality where you have to experiment. Sample Rate has to be less than 32KHz for better performance
+
+  <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a2.png" />
+  <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a3.png" />
+  <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a4.png" />
+  <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a4.png" />
+- We have created some sample exports which you can try out from [here](https://github.com/sbcshop/MusicPi_Software/tree/main/Examples/samples)
+
    
 ## Resources
   * [Schematic](https://github.com/sbcshop/MusicPi_Hardware/blob/main/Design%20Data/Sch%20MusicPi.pdf)
