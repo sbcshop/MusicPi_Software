@@ -161,7 +161,7 @@ With Pico or Pico W connected to MusicPi, you can proceed to follow below steps 
   <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a2.png" />
   <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a3.png" />
   <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a4.png" />
-  <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a4.png" />
+  <img src= "https://github.com/sbcshop/MusicPi_Software/blob/main/images/audicity_steps/a5.png" />
 - We have created some sample exports which you can try out from [here](https://github.com/sbcshop/MusicPi_Software/tree/main/Examples/samples)
 
    
